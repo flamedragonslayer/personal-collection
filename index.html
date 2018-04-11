@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Collection</title>
+    <style>
+        #middle{
+            position: absolute;
+
+            left:568px;
+            top:0;
+
+            width: 400px;
+            height:760px;
+        }
+
+        .middle-sub{
+            position: relative;
+            float: left;
+            display: inline-block;
+            width: 25%;
+            height: 100%;
+            overflow: hidden;
+        }
+        /*#middle:nth-child(1){*/
+            /*background-image: url("img/1.jpg");*/
+        /*}*/
+        /*#middle:nth-child(2){*/
+            /*background-image: url("img/2.jpg");*/
+        /*}*/
+        /*#middle:nth-child(3){*/
+            /*background-image: url("img/3.jpg");*/
+        /*}*/
+        /*#middle:nth-child(4){*/
+            /*background-image: url("img/4.jpg");*/
+        /*}*/
+        .middle-sub-text{
+            position: absolute;
+            /*这里要想让每个小格中的文字绝对定位于每个小格，就需要将小格设为relative*/
+            left:40px;
+            top:300px;
+
+            color: lightskyblue;
+            font-size: 50px;
+            font-weight: bolder;
+            font-family: Aharoni;
+            opacity: 0;
+        }
+
+        .middle-sub:hover{
+            cursor: pointer;
+        }
+        .middle-sub:hover .middle-sub-img{
+            transition: opacity 2s ease-in-out;
+            opacity: 0.05;
+        }
+        .middle-sub:hover .middle-sub-text{
+            transition: opacity 2s ease-in-out;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div id="middle">
+        <div class="middle-sub" ><img src="img/1.jpg" class="middle-sub-img"><div class="middle-sub-text">1</div></div>
+        <div class="middle-sub" ><img src="img/2.jpg" class="middle-sub-img"><div class="middle-sub-text">2</div></div>
+        <div class="middle-sub" ><img src="img/3.jpg" class="middle-sub-img"><div class="middle-sub-text">3</div></div>
+        <div class="middle-sub" ><img src="img/4.jpg" class="middle-sub-img"><div class="middle-sub-text">4</div></div>
+        <!--<div class="middle-sub"></div>-->
+        <!--<div class="middle-sub"></div>-->
+        <!--<div class="middle-sub"></div>-->
+        <!--<div class="middle-sub"></div>-->
+    </div>
+
+
+    <script>
+
+        var log=console.log.bind(this)
+
+        log(window.innerWidth)
+        log(window.innerHeight)
+
+
+    </script>
+</body>
+</html>
